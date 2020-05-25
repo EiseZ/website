@@ -108,11 +108,11 @@
       var mode = document.cookie;
       window.alert(document.cookie);
       if (mode = "mode=school") {
-        schoolFavs.style.display = "grid";
-        thuisFavs.style.display = "none";
+        window.alert("Modus is school.");
+        schoolModus()
       } else if (mode = "mode=thuis") {
-        schoolFavs.style.display = "none";
-        thuisFavs.style.display = "grid";
+        window.alert("Modus is thuis.");
+        thuisModus()
       }
 
       function schoolModus() {
