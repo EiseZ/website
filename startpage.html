@@ -105,6 +105,8 @@
       input.focus();
       input.select();
 
+      var mode = document.cookie;
+      window.alert(document.cookie);
       if (mode = "school") {
         schoolFavs.style.display = "grid";
         thuisFavs.style.display = "none";
@@ -116,12 +118,12 @@
       function schoolModus() {
         schoolFavs.style.display = "grid";
         thuisFavs.style.display = "none";
-        document.cookie = "user=John";
-        alert(document.cookie)
+        document.cookie = "mode=school";
       }
       function thuisModus() {
         schoolFavs.style.display = "none";
         thuisFavs.style.display = "grid";
+        document.cookie = "mode=thuis";
       }
 
     </script>
