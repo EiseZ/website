@@ -132,21 +132,12 @@
       function search() {
         console.log("search.");
         validURL(input.value);
-        if(str.includes(".com") || str.includes(".nl") || str.includes(".net") || str.includes(".org") || str.includes(".io")) {
-          window.open("https://" + input.value,"_self")
+        if(str.includes(".com") || str.includes(".nl") || str.includes(".net") || str.includes(".org") || str.includes(".io") || str.includes(".info") || str.includes(".de") || str.includes(".uk") || str.includes(".int") ) {
+          console.log("Link!");
+          window.open("https://" + input.value,"_self");
         } else {
-          window.open("https://www.google.com/search?q=" + input.value,"_self")
+          window.open("https://www.google.com/search?q=" + input.value,"_self");
         }
-      }
-
-      function validURL(str) {
-        var pattern = new RegExp(
-        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-        '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-        '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-        '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-        return !!pattern.test(str);
       }
 
     </script>
