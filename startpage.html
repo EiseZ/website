@@ -107,10 +107,10 @@
 
       var mode = document.cookie;
       window.alert(document.cookie);
-      if (mode = "school") {
+      if (mode = "mode=school") {
         schoolFavs.style.display = "grid";
         thuisFavs.style.display = "none";
-      } else {
+      } else if (mode = "mode=thuis") {
         schoolFavs.style.display = "none";
         thuisFavs.style.display = "grid";
       }
