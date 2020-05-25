@@ -8,7 +8,7 @@
   <body class="startpage">
 
     <div class="searchbar">
-      <form action="https://www.google.com/search" method="GET">
+      <form action="JavaScript:search()" method="GET">
         <input type="text" name="q" placeholder="" class="inputfield" id="searchbar">
       </form>
     </div>
@@ -92,6 +92,12 @@
           <h4>GMail</h4>
         </div>
       </a>
+      <a href="https://www.instagram.com/?hl=nl" class="fav">
+        <img src="https://unsplash.it/400/300" class="card-img">
+        <div class="container-fav">
+          <h4>Instagram</h4>
+        </div>
+      </a>
     </div>
 
 
@@ -121,6 +127,11 @@
         schoolFavs.style.display = "none";
         thuisFavs.style.display = "grid";
         document.cookie = "mode=thuis";
+      }
+
+      function search() {
+        console.log("search.");
+        window.open("https://www.youraddress.com","_self")
       }
 
     </script>
