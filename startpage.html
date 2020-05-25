@@ -133,7 +133,7 @@
         console.log("search.");
         validURL(input.value);
         if(str.includes(".com") || str.includes(".nl") || str.includes(".net") || str.includes(".org") || str.includes(".io")) {
-          window.open(input.value,"_self")
+          window.open("https://" + input.value,"_self")
         } else {
           window.open("https://www.google.com/search?q=" + input.value,"_self")
         }
