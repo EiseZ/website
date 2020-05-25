@@ -13,7 +13,10 @@
       </form>
     </div>
 
-    <div class="favs">
+    <button onclick="schoolModus()" class="school-button">School</button>
+    <button onclick="thuisModus()" class="thuis-button">Thuis</button>
+
+    <div class="favs" id="schoolFavs">
       <a href="https://hml.magister.net/magister" class="fav">
         <img src="https://unsplash.it/400/300" class="card-img">
         <div class="container-fav">
@@ -44,12 +47,83 @@
           <h4>Office</h4>
         </div>
       </a>
+      <a href="https://www.mathway.com/Algebra" class="fav">
+        <img src="https://unsplash.it/400/300" class="card-img">
+        <div class="container-fav">
+          <h4>Mathway</h4>
+        </div>
+      </a>
+      <a href="https://calendar.google.com/calendar/r" class="fav">
+        <img src="https://unsplash.it/400/300" class="card-img">
+        <div class="container-fav">
+          <h4>Agenda</h4>
+        </div>
+      </a>
+      <a href="https://translate.google.com/" class="fav">
+        <img src="https://unsplash.it/400/300" class="card-img">
+        <div class="container-fav">
+          <h4>Translate</h4>
+        </div>
+      </a>
     </div>
+
+    <div class="favs" id="thuisFavs">
+      <a href="https://www.youtube.com/" class="fav">
+        <img src="https://unsplash.it/400/300" class="card-img">
+        <div class="container-fav">
+          <h4>Youtube</h4>
+        </div>
+      </a>
+      <a href="https://www.twitch.tv/" class="fav">
+        <img src="https://unsplash.it/400/300" class="card-img">
+        <div class="container-fav">
+          <h4>Twitch</h4>
+        </div>
+      </a>
+      <a href="https://www.netflix.com/login" class="fav">
+        <img src="https://unsplash.it/400/300" class="card-img">
+        <div class="container-fav">
+          <h4>Netflix</h4>
+        </div>
+      </a>
+      <a href="https://mail.google.com/mail/u/0/#inbox" class="fav">
+        <img src="https://unsplash.it/400/300" class="card-img">
+        <div class="container-fav">
+          <h4>GMail</h4>
+        </div>
+      </a>
+    </div>
+
 
     <script type="text/javascript">
       var input = document.getElementById('searchbar');
+      var schoolFavs = document.getElementById("schoolFavs");
+      var thuisFavs = document.getElementById("thuisFavs");
+      var schoolButton = document.getElementById("schoolButton");
+      var thuisButton = document.getElementById("thuisButton");
+
       input.focus();
       input.select();
+
+      if (mode = "school") {
+        schoolFavs.style.display = "grid";
+        thuisFavs.style.display = "none";
+      } else {
+        schoolFavs.style.display = "none";
+        thuisFavs.style.display = "grid";
+      }
+
+      function schoolModus() {
+        schoolFavs.style.display = "grid";
+        thuisFavs.style.display = "none";
+        document.cookie = "user=John";
+        alert(document.cookie)
+      }
+      function thuisModus() {
+        schoolFavs.style.display = "none";
+        thuisFavs.style.display = "grid";
+      }
+
     </script>
 
   </body>
