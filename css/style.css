@@ -188,3 +188,20 @@ h4 {
   border-bottom-width: 3px;
   cursor: pointer;
 }
+
+.info {
+  margin: 30px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+
+.container-info {
+  height: 5em;
+  text-align: center;
+}
+
+.dit-ben-ik {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
