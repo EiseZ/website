@@ -113,24 +113,22 @@
 
       var mode = document.cookie;
       if (mode.includes("mode=school")) {
-        schoolModus();
+        schoolModus()
       } else if (mode.includes("mode=thuis")) {
-        thuisModus();
+        thuisModus()
       } else (
-        thuisModus();
+        thuisModus()
       )
 
       function schoolModus() {
         schoolFavs.style.display = "grid";
         thuisFavs.style.display = "none";
         document.cookie = "mode=school";
-        console.log(document.cookie);
       }
       function thuisModus() {
         schoolFavs.style.display = "none";
         thuisFavs.style.display = "grid";
         document.cookie = "mode=thuis";
-        console.log(document.cookie);
       }
 
       function search() {
