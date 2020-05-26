@@ -112,11 +112,13 @@
       input.select();
 
       var mode = document.cookie;
-      if (mode == "mode=school") {
-        schoolModus()
-      } else if (mode == "mode=thuis") {
-        thuisModus()
-      }
+      if (mode.includes("mode=school")) {
+        schoolModus();
+      } else if (mode.includes("mode=thuis")) {
+        thuisModus();
+      } else (
+        thuisModus();
+      )
 
       function schoolModus() {
         schoolFavs.style.display = "grid";
